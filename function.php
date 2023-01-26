@@ -4,7 +4,6 @@
 define('TEMPLATES_DIRECTORY_PATH', get_template_directory_uri());
 
 
-add_action('wp_enqueue_scripts', 'devfolio_theme_css_js');
 
 function devfolio_theme_css_js()
 {
@@ -24,6 +23,8 @@ function devfolio_theme_css_js()
     wp_enqueue_script('gsap', TEMPLATES_DIRECTORY_PATH . '/assets/js/gsap.min.js', array('jquery'), '1.0.0', true);
     wp_enqueue_script('ScrollToPlugin', TEMPLATES_DIRECTORY_PATH . '/assets/js/ScrollToPlugin.min.js', array('jquery'), '1.0.0', true);
     wp_enqueue_script('ScrollSmoother', TEMPLATES_DIRECTORY_PATH . '/assets/js/ScrollSmoother.min.js', array('jquery'), '1.0.0', true);
-    wp_enqueue_script('splittext', TEMPLATES_DIRECTORY_PATH . '/assets/js/splittext.min.js', array('jquery'), '1.0.0', true);
+    wp_enqueue_script('split-text', TEMPLATES_DIRECTORY_PATH . '/assets/js/splittext.min.js', array('jquery'), '1.0.0', true);
     wp_enqueue_script('app', TEMPLATES_DIRECTORY_PATH . '/assets/js/app.js', array('jquery'), '1.0.0', true);
 }
+
+add_action('wp_enqueue_scripts', 'devfolio_theme_css_js');
